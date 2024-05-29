@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: #010101;
+}
+
+body {
+    background-color: white;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 800;
+    color: #010101;
+}
+
+.logo > img {
+    padding-right: 5px;
+}
+.meal{
+    color: #FC8A06;
+    font-weight: 800;
+}
+
+.nav {
+    position: sticky;
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlist {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+    list-style: none;
+}
+
+.navlist > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.search{
+    width: fit-content;
+}
+#search {
+    padding: 10px 20px;
+    padding-left: 30px;
+    /* border: 0.5px solid #010101; */
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.searchSVG {
+    position: absolute;
+    top: 12px;
+    left: 7px;
+}

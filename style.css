@@ -15,7 +15,9 @@ body {
 .border {
     border-bottom: 1px solid #FC8A06;
     opacity: 0.2;
-    margin: 0px 20px;
+    margin: 0px 85px;
+    /* padding: 25px 0px; */
+    
 }
 
 .container {
@@ -44,7 +46,7 @@ body {
 
 .nav {
     position: fixed;
-    z-index: 10;
+    z-index: 15;
     background-color: white;
     width: calc(100vw - 200px);
     padding: 30px 100px;
@@ -217,7 +219,7 @@ body {
 
 .choices {
     padding: 20px 40px; 
-    padding-top: 100px;   
+    padding-top: 75px;   
     position: relative;
 } 
 .choices > h2 {
@@ -252,7 +254,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
+  background: transparent;
   cursor: pointer;
   z-index: 8;
   width: 150px;
@@ -268,3 +271,129 @@ body {
   right: 0;
 }
 
+
+
+
+.foodProducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.FoodHead {
+    font-size: 35px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+
+.foodCont {
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+
+.foodCard {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding: 0;
+    border-radius: 20px;
+    /* box-shadow: none; */
+}
+/* .foodCard:hover {
+    transition: all;
+    scale: 10px;
+} */
+
+.foodCard > .itemBuy {
+    padding: 10px 20px;
+    padding-bottom: 30px;
+} 
+
+.foodCard > .itemBuy > .itemPrice {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.foodCard > .itemBuy > .ATCb {
+    padding: 10px 20px;
+} 
+
+.foodCard > h2 {
+    padding: 15px 20px;
+    padding-bottom: 0px;
+}
+
+.foodImg {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+    padding: 0px;
+    width: 100%;
+    height: 220px;
+}
+
+
+
+
+
+.footer {
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 250px;
+}
+
+.logoBtn {
+    /* background-color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 50px; */
+}
+
+.logoCap > .logo {
+    color: white;
+    font-size: 50px;
+}
+
+.footerCont {
+    padding-left: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 140px;
+    padding-top: 20px;
+}
+.footerCont > .comp {
+    color: white;
+    font-size: 20px;
+}
+
+.comp > ul {
+    padding-top: 10px;
+}
+.comp > ul > li {
+    color: rgb(138, 138, 138);
+    list-style: none;
+    padding: 5px 0px;
+    font-size: 15px;
+}
+
+.citiesBtn {
+    background-color: black;
+    color: rgb(138, 138, 138);
+    border: 1px solid white;
+    padding: 5px 5px;
+    border-radius: 10px;
+}

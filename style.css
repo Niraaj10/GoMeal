@@ -7,10 +7,17 @@
     color: #010101;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: white;
-    
+    /* overflow: hidden; */
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 .border {
     border-bottom: 1px solid #FC8A06;
@@ -67,17 +74,18 @@ body {
     list-style: none;
 }
 
-.navlist > li {
+.navlist > li > a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
+    text-decoration: none;
 }
 
 .search{
     width: fit-content;
 }
-#search {
+#searchBar {
     width: 230px;
     padding: 10px 20px;
     padding-left: 30px;
@@ -161,6 +169,9 @@ body {
 }
 .playBtn > img {
     height: 100px;
+}
+a {
+    text-decoration: none;
 }
 
 
@@ -300,6 +311,7 @@ body {
 
 
 .foodCard {
+    background-color: white;
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -397,3 +409,28 @@ body {
     padding: 5px 5px;
     border-radius: 10px;
 }
+
+
+
+
+
+
+#filteredItemsContainer {
+    align-items: center;
+    position: absolute;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    background-color: transparent;
+    /* margin-top: 35px; */
+    padding: 0px 174px;
+    padding-top: 140px;
+    padding-bottom: 50px;
+    backdrop-filter: blur(10px);
+    width: 78vw;
+    height: 78vh;
+    overflow: auto;
+}
+
+

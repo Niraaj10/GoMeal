@@ -12,6 +12,12 @@
 
     <div class="container">
 
+
+
+
+
+
+
         <div class="nav">
             <div class="logo">
                 <!-- <img src="assets/SVG/Logo.svg" alt=""> -->
@@ -22,13 +28,25 @@
             <ul class="navlist">
                 <div class="search">
                     <img class="searchSVG" src="assets/SVG/search.svg" alt=""><input type="text" name="search"
-                        id="search" placeholder="What do you want to eat today...">
+                        id="searchBar" placeholder="What do you want to eat today...">
                 </div>
-                <li> <img src="assets/SVG/home.svg" alt="">Home</li>
-                <li> <img src="assets/SVG/cart.svg" alt="">Order</li>
-                <li> <img src="assets/SVG/login.svg" alt="">LogIn / SignIn</li>
+                <li> <a href=""><img src="assets/SVG/home.svg" alt="">Home</a></li>
+                <li> <a href="pages/order.html"><img src="assets/SVG/cart.svg" alt="">Order</a></li>
+                <li> <a href="pages/Login.html"><img src="assets/SVG/login.svg" alt="">LogIn / SignIn </a></li>
             </ul>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -46,12 +64,13 @@
                 <img src="assets/SVG/Arrow.svg" alt="" class="arrow">
 
                 <div class="btns">
-                    <button class="orderBtn">
+                    <!-- <button class="orderBtn" onClick="document.getElementById('choices').scrollIntoView();"> -->
+                    <button class="orderBtn" id="downBtn">
                         Order Noww!
                     </button>
-                    <button class="playBtn">
-                        <img src="assets/SVG/paly.svg" alt="">Order Process
-                    </button>
+                    <a href="pages/order.html"><button class="playBtn">
+                            <img src="assets/SVG/paly.svg" alt="">Order Process
+                        </button></a>
                 </div>
             </div>
 
@@ -103,7 +122,16 @@
         </div>
 
 
-        <div class="border"></div>
+
+
+
+
+
+
+
+
+
+        <div class="border" id="choices"></div>
 
 
         <div class="homeDown">
@@ -137,11 +165,11 @@
 
             <div class="foodProducts">
                 <div class="FoodHead">Most Popular items</div>
-                <div class="foodCont">
+                <div class="foodCont" id="foodContainer">
 
 
 
-                    <div class="itemCont foodCard">
+                    <!-- <div class="itemCont foodCard" id="foodCard">
                         <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
 
                         <h2 class="itemName">Chiken</h2>
@@ -149,106 +177,11 @@
                             <button class="ATCb">Add To Cart</button>
                             <div class="itemPrice">₹.400</div>
                         </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/chikenBiryani.avif" alt="" class="itemImg foodImg">
+                    </div> -->
 
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
 
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
 
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
 
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
-
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
-
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
-
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
-
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
-
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
-
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
-                    <div class="itemCont foodCard">
-                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
-
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
-                            <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
-                        </div>
-                    </div>
 
 
 
@@ -271,15 +204,68 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="SearchhhContainer"> -->
+            <div class="searchCont" id="filteredItemsContainer">
+                <div class="foodProducts">
+                    <!-- <div class="FoodHead">Most Popular items</div> -->
+                    <div class="foodCont" id="foodContainer">
+
+
+
+                        <!-- <div class="itemCont foodCard" id="foodCard">
+                        <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
+
+                        <h2 class="itemName">Chiken</h2>
+                        <div class="itemBuy">
+                            <button class="ATCb">Add To Cart</button>
+                            <div class="itemPrice">₹.400</div>
+                        </div>
+                    </div> -->
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="border"></div>
 
         <div class="footer">
             <div class="logoCap">
                 <!-- <button class="logoBtn"> -->
-                    <div class="logo">
-                        <!-- <img src="assets/SVG/Logo.svg" alt=""> -->
-                        Go<span class="meal">MEAL</span>
-                    </div>
+                <div class="logo">
+                    <!-- <img src="assets/SVG/Logo.svg" alt=""> -->
+                    Go<span class="meal">MEAL</span>
+                </div>
                 <!-- </button> -->
             </div>
 

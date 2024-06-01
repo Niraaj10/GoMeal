@@ -433,6 +433,7 @@ a {
     width: 78vw;
     height: 78vh;
     overflow: auto;
+    z-index: 11;
 }
 
 
@@ -444,6 +445,7 @@ a {
 
 
 .CartCont {
+    display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -454,7 +456,7 @@ a {
 #cartCont {
     position: absolute;
     /* display: none; */
-    /* z-index: 15; */
+    z-index: 1;
     gap: 50px;
     background-color: transparent;
     padding: 0px 174px;
@@ -511,15 +513,142 @@ a {
 
 .itemsDetails {
     width: 30%;
-    list-style: none;
+    border-left: 1px solid #010101;
+    margin-bottom: 10px;
+    padding-left: 30px;
 }
 .itemsDetails > ul > li {
     list-style: none;
+    height: 220px;
+    
+    
 }
 
-.AddLi{
-    height: 40%;
+li > h5 {
+    font-weight: 400;
+    padding-bottom: 5px;
+    padding: 21px 10px;
 }
-.PriceLi {
-    height: 60%;
+
+
+.addCard{
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    border: 0.5px solid rgba(128, 128, 128, 0.212);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.address{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+.adddd {
+    font-size: 15px;
+    font-weight: 200;
+}
+.ChangeBtn {
+    background-color: #FC8A06;
+    border: none;
+    padding: 5px 50px;
+    border-radius: 10px;
+}
+
+
+
+.Plist {
+    border: 0.5px solid rgba(128, 128, 128, 0.212);
+    border-radius: 10px;
+    padding: 10px;
+}
+.Plist > ul > li {
+    list-style: none;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 10px;
+}
+.GTotall {
+    border-top: 2px dotted rgba(173, 173, 173, 0.53);
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+
+
+
+.cartItems {
+    padding: 20px;
+    overflow-y: scroll;
+    
+}
+.cartItems::-webkit-scrollbar {
+    display: none;
+  }
+
+.CartItemCont {
+    border: 0.5px solid rgba(128, 128, 128, 0.212);
+    border-radius: 10px;
+    display: flex;
+    gap: 50px;
+    /* justify-content: space-around; */
+    padding: 20px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.CartitemImg {
+    width: 100px;
+    flex: 20;
+}
+.CartitemName {
+    flex: 60;
+}
+.CartitemBuy{
+    flex: 20;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+.buttoncontainer {
+    border: 2px solid #9B9B9B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.INbtn {
+    border: none;
+    padding: 4px 10px;
+    padding-top: 8px;
+
+}
+#decreaseBtn {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 2px solid #9B9B9B;
+    background-color: transparent;
+}
+#increaseBtn {
+    background-color: transparent;
+    border-left: 2px solid #9B9B9B;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#counter {
+    margin: 0px 17px;
+}
+.CartitemPrice {
+
 }

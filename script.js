@@ -81,9 +81,9 @@ function SearchCards(FoodItems) {
             foodCard.className = "foodCard itemCont";
             foodCard.innerHTML = `<img src="${item.imageL}" alt="" class="itemImg foodImg">
         <h2 class="itemName">${item.name}</h2>
-        <div class="itemBuy">
+        <div class="itemBuy" >
             <button class="ATCb">Add To Cart</button>
-            <div class="itemPrice">₹.${item.price}</div>
+            <div class="itemPrice" id="ItemCont">₹.${item.price}</div>
         </div>`;
 
             foodContainer.appendChild(foodCard);
@@ -117,12 +117,61 @@ document.getElementById('searchBar').addEventListener('keyup', function () {
         SearchCards(searched_Items);
 
     }
-
-
-
 });
 
 
 
 
+//on clicl on Order btn
+document.getElementById('OCBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    if(document.getElementById('cartCont').style.display == "none"){
+        document.getElementById('cartCont').style.display = 'flex';
+        document.getElementById('body').style.overflow = 'hidden';
+        // document.getElementsByTagName('body').style.overflow = 'hidden';
+    } else {
+        document.getElementById('body').style.overflow = '';
+        document.getElementById('cartCont').style.display = 'none';
+
+    }
+})
+
+
+// Cart
+document.addEventListener('DOMContentLoaded', () => {
+    const cartItems = document.getElementById('cartItems');
+    const subTotalPrice = document.getElementById('SubTotal');
+    const gstPrice = document.getElementById('gstPrice');
+    const GTotalPrice = document.getElementById('GTotal');
+    let subTotalPricee = 0;
+
+
+    document.querySelectorAll('.ATCb').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const Itemm = btn.parentElement.parentElement;
+            const ItemImg = Itemm.querySelector()///////////////////////////////////////
+            const ItemName = Itemm.querySelector('#ItemName').textContent;
+            const ItemPrice = parseFloat(Itemm.querySelector('.itemPrice').textContent);
+            const gst = ItemPrice * 0.5;
+            // const GrandTotal 
+
+            const ItemList = document.createElement('div');
+            ItemList.className = 'CartItemCont';
+            ItemList.innerHTML = `<img src="assets/img/Biryani.avif" alt="" class="CartitemImg">
+        
+            <h2 class="CartitemName" id="ItemName">${ItemName}</h2>
+            <div class="CartitemBuy">
+                <div class="itemPrice" id="ItemPrice">₹ ${ItemPrice}.00</div>
+                <div class="buttoncontainer">
+                    <button id="decreaseBtn" class="INbtn"><img src="assets/SVG/minus.svg" alt=""></button>
+                    <span id="counter" class="counter">1</span>
+                    <button id="increaseBtn" class="INbtn"><img src="assets/SVG/plus.svg" alt=""></button>
+                </div>
+            </div>`;
+
+            // console.log(Itemm);
+            
+        })
+    });
+});
 

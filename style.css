@@ -34,7 +34,8 @@ body::-webkit-scrollbar {
     /* align-content: center;
     align-items: center;
     justify-content: center; */
-    /* position: relative; */
+    position: relative;
+    overflow: hidden;
 }
 
 .logo {

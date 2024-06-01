@@ -8,7 +8,7 @@
     <title>GoMeal</title>
 </head>
 
-<body>
+<body id="body">
 
     <div class="container">
 
@@ -31,7 +31,7 @@
                         id="searchBar" placeholder="What do you want to eat today...">
                 </div>
                 <li> <img src="assets/SVG/home.svg" alt="">Home</li>
-                <li> <img src="assets/SVG/cart.svg" alt="">Order</li>
+                <li id="OCBtn"> <img src="assets/SVG/cart.svg" alt="">Order</li>
                 <li> <img src="assets/SVG/login.svg" alt="">LogIn / SignIn </li>
             </ul>
         </div>
@@ -76,13 +76,13 @@
 
             <div class="homeRight">
 
-                <div class="itemCont">
+                <div class="itemCont" id="ItemCont">
                     <img src="assets/img/Biryani.avif" alt="" class="itemImg">
 
-                    <h2 class="itemName">Biryani</h2>
+                    <h2 class="itemName" id="ItemName">Biryani</h2>
                     <div class="itemBuy">
                         <button class="ATCb">Add To Cart</button>
-                        <div class="itemPrice">₹.199</div>
+                        <div class="itemPrice" >₹.199</div>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                     <h2 class="itemName">Thali</h2>
                     <div class="itemBuy">
                         <button class="ATCb">Add To Cart</button>
-                        <div class="itemPrice">₹.260</div>
+                        <div class="itemPrice" >₹.260</div>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@
                     <h2 class="itemName">Chiken</h2>
                     <div class="itemBuy">
                         <button class="ATCb">Add To Cart</button>
-                        <div class="itemPrice">₹.400</div>
+                        <div class="itemPrice" >₹.400</div>
                     </div>
                 </div>
             </div>
@@ -172,8 +172,8 @@
                     <!-- <div class="itemCont foodCard" id="foodCard">
                         <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
 
-                        <h2 class="itemName">Chiken</h2>
-                        <div class="itemBuy">
+                        <h2 class="itemName" id="ItemName">Chiken</h2>
+                        <div class="itemBuy" id="ItemCont">
                             <button class="ATCb">Add To Cart</button>
                             <div class="itemPrice">₹.400</div>
                         </div>
@@ -222,13 +222,13 @@
 
 
 
-                    <!-- <div class="itemCont foodCard" id="foodCard">
+                    <!-- <div class="itemCont foodCard" id="ItemCont">
                         <img src="assets/img/kaajuKari.avif" alt="" class="itemImg foodImg">
 
-                        <h2 class="itemName">Chiken</h2>
+                        <h2 class="itemName" id="ItemName">Chiken</h2>
                         <div class="itemBuy">
                             <button class="ATCb">Add To Cart</button>
-                            <div class="itemPrice">₹.400</div>
+                            <div class="itemPrice" >₹.400</div>
                         </div>
                     </div> -->
 
@@ -252,14 +252,13 @@
 
                 <div class="CartItemList">
                     <div class="cartItems">
-                        <div class="CartItemCont">
+
+                        <div class="CartItemCont" id="ItemCont">
                             <img src="assets/img/Biryani.avif" alt="" class="CartitemImg">
         
-                            <h2 class="CartitemName">Biryani</h2>
+                            <h2 class="CartitemName" id="ItemName">Biryani</h2>
                             <div class="CartitemBuy">
-                                <!-- <button class="ATCb">Add To Cart</button> -->
-                                <!-- <button class="ATCb">Add To Cart</button> -->
-                                <div class="CartitemPrice">₹.199</div>
+                                <div class="itemPrice" id="ItemPrice">₹.199</div>
                                 <div class="buttoncontainer">
                                     <button id="decreaseBtn" class="INbtn"><img src="assets/SVG/minus.svg" alt=""></button>
                                     <span id="counter" class="counter">1</span>
@@ -267,36 +266,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="CartItemCont">
-                            <img src="assets/img/Biryani.avif" alt="" class="CartitemImg">
-        
-                            <h2 class="CartitemName">Biryani</h2>
-                            <div class="CartitemBuy">
-                                <!-- <button class="ATCb">Add To Cart</button> -->
-                                <!-- <button class="ATCb">Add To Cart</button> -->
-                                <div class="CartitemPrice">₹.199</div>
-                                <div class="buttoncontainer">
-                                    <button id="decreaseBtn" class="INbtn"><img src="assets/SVG/minus.svg" alt=""></button>
-                                    <span id="counter" class="counter">1</span>
-                                    <button id="increaseBtn" class="INbtn"><img src="assets/SVG/plus.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="CartItemCont">
-                            <img src="assets/img/Biryani.avif" alt="" class="CartitemImg">
-        
-                            <h2 class="CartitemName">Biryani</h2>
-                            <div class="CartitemBuy">
-                                <!-- <button class="ATCb">Add To Cart</button> -->
-                                <!-- <button class="ATCb">Add To Cart</button> -->
-                                <div class="CartitemPrice">₹.199</div>
-                                <div class="buttoncontainer">
-                                    <button id="decreaseBtn" class="INbtn"><img src="assets/SVG/minus.svg" alt=""></button>
-                                    <span id="counter" class="counter">1</span>
-                                    <button id="increaseBtn" class="INbtn"><img src="assets/SVG/plus.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
+
+                       
 
                         
                         
@@ -331,7 +302,7 @@
                                     <ul>
                                         <li>
                                             <div class="Stotal">Sub Total</div>
-                                            <div class="Sprice">₹ 314.00</div>
+                                            <div class="Sprice" id="SubTotal">₹ 314.00</div>
                                         </li>
                                         <li>
                                             <div class="Stotal">Discount</div>
@@ -339,13 +310,13 @@
                                         </li>
                                         <li>
                                             <div class="Stotal">Taxes and Charges</div>
-                                            <div class="Sprice">₹ 15.70</div>
+                                            <div class="Sprice" id="gstPrice">₹ 15.70</div>
                                         </li>
                                         
                                     </ul>
                                     <div class="GTotall">
                                         <div class="Gtotal">Grand Totak</div>
-                                        <div class="Gprice">₹ 329.70</div>
+                                        <div class="Gprice" id="GTotal">₹ 329.70</div>
                                     </div>
                                     
                                 </div>

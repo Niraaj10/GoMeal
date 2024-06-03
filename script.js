@@ -82,13 +82,16 @@ function SearchCards(FoodItems) {
             foodCard.innerHTML = `<img src="${item.imageL}" alt="" class="itemImg foodImg">
         <h2 class="itemName">${item.name}</h2>
         <div class="itemBuy" >
-            <button class="ATCb">Add To Cart</button>
+            <button class="ATCb" id='ATCb'>Add To Cart</button>
             <div class="itemPrice" id="ItemCont">₹.${item.price}</div>
         </div>`;
 
             foodContainer.appendChild(foodCard);
         });
 
+
+
+        
 
 }
 
@@ -149,15 +152,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.ATCb').forEach(btn => {
         btn.addEventListener('click', () => {
             const Itemm = btn.parentElement.parentElement;
-            const ItemImg = Itemm.querySelector()///////////////////////////////////////
-            const ItemName = Itemm.querySelector('#ItemName').textContent;
-            const ItemPrice = parseFloat(Itemm.querySelector('.itemPrice').textContent);
+            // console.log(Itemm);            
+            const ItemImg = Itemm.querySelector('.itemImg').src;///////////////////////////////////////
+            const ItemName = Itemm.querySelector('.itemName').textContent;
+            // const ItemPrice = parseFloat(Itemm.querySelector('.itemPrice').textContent);
+            const ItemPrice = Itemm.querySelector('.itemPrice').textContent.slice(2,6);
             const gst = ItemPrice * 0.5;
             // const GrandTotal 
+            // console.log(ItemImg);
+            // console.log(ItemName);
+            // console.log(ItemPrice);
+            
+            
+            
 
             const ItemList = document.createElement('div');
             ItemList.className = 'CartItemCont';
-            ItemList.innerHTML = `<img src="assets/img/Biryani.avif" alt="" class="CartitemImg">
+            ItemList.innerHTML = `<img src="${ItemImg}" alt="" class="CartitemImg">
         
             <h2 class="CartitemName" id="ItemName">${ItemName}</h2>
             <div class="CartitemBuy">
@@ -169,7 +180,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>`;
 
-            // console.log(Itemm);
+            console.log(cartItems);
+            cartItems.appendChild(ItemList);
+
+
+            // Update the price 
+            subTotalPricee += ItemPrice;
+            const totalGst = subTotalPricee * 0.05;
+            const totalPrice = subTotalPricee + totalGst
+
+            subTotalPrice.textContent = subTotalPricee.toFixed(2);
+            gstPrice.textContent = totalGst.toFixed(2);
+            GTotalPrice.textContent = totalPrice.toFixed(2);
+            
+
+            const PList = document.createElement('div');
+            PList.className = 'Plist';
+            PList.innerHTML = 
             
         })
     });

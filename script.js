@@ -63,7 +63,14 @@ imgCont.forEach((item, i) => {
 
 // Scroll down
 document.getElementById('downBtn').addEventListener('click', () => {
-    window.scrollBy(0, 750);
+    // window.scrollBy(0, 750);
+    scrollToTop();
+    function scrollToTop() {
+        window.scrollTo({
+            top: 750,
+            behavior: 'smooth' // Smooth scroll animation
+        });
+    }
 })
 
 
@@ -76,22 +83,22 @@ function SearchCards(FoodItems) {
     foodContainer.innerHTML = '';
 
 
-        FoodItems.forEach(item => {
-            const foodCard = document.createElement('div');
-            foodCard.className = "foodCard itemCont";
-            foodCard.innerHTML = `<img src="${item.imageL}" alt="" class="itemImg foodImg">
+    FoodItems.forEach(item => {
+        const foodCard = document.createElement('div');
+        foodCard.className = "foodCard itemCont";
+        foodCard.innerHTML = `<img src="${item.imageL}" alt="" class="itemImg foodImg">
         <h2 class="itemName">${item.name}</h2>
         <div class="itemBuy" >
             <button class="ATCb" id='ATCb'>Add To Cart</button>
             <div class="itemPrice" id="ItemCont">₹.${item.price}</div>
         </div>`;
 
-            foodContainer.appendChild(foodCard);
-        });
+        foodContainer.appendChild(foodCard);
+    });
 
 
 
-        
+
 
 }
 
@@ -103,17 +110,17 @@ function searchItems(search) {
 //Search/Filter
 document.getElementById('searchBar').addEventListener('keyup', function () {
     const Search = this.value;
-    const searchInput = document.getElementById('searchBar') 
+    const searchInput = document.getElementById('searchBar')
     // const value = searchInput.value
     // console.log(value);
-    
+
     console.log(Search);
 
 
     const searched_Items = searchItems(Search);
     console.log(searched_Items);
 
-    if(!Search){
+    if (!Search) {
         document.getElementById('filteredItemsContainer').style.display = "none";
     } else {
         document.getElementById('filteredItemsContainer').style.display = "flex";
@@ -125,19 +132,28 @@ document.getElementById('searchBar').addEventListener('keyup', function () {
 
 
 
-//on clicl on Order btn
+//on click on Order btn
+document.getElementById('cartCont').style.display = "none"
 document.getElementById('OCBtn').addEventListener('click', (e) => {
     e.preventDefault();
-    if(document.getElementById('cartCont').style.display == "none"){
+    if (document.getElementById('cartCont').style.display == "none") {
+        
+        window.scroll(0,0);
+        // scrollToTop();
         document.getElementById('cartCont').style.display = 'flex';
         document.getElementById('body').style.overflow = 'hidden';
-        // document.getElementsByTagName('body').style.overflow = 'hidden';
     } else {
         document.getElementById('body').style.overflow = '';
         document.getElementById('cartCont').style.display = 'none';
-
     }
-})
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'none' // Smooth scroll animation
+        });
+    }
+});
 
 
 // Cart
@@ -155,16 +171,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // console.log(Itemm);            
             const ItemImg = Itemm.querySelector('.itemImg').src;///////////////////////////////////////
             const ItemName = Itemm.querySelector('.itemName').textContent;
-            // const ItemPrice = parseFloat(Itemm.querySelector('.itemPrice').textContent);
-            const ItemPrice = Itemm.querySelector('.itemPrice').textContent.slice(2,6);
-            const gst = ItemPrice * 0.5;
-            // const GrandTotal 
-            // console.log(ItemImg);
-            // console.log(ItemName);
-            // console.log(ItemPrice);
-            
-            
-            
+            const ItemPrice = parseFloat(Itemm.querySelector('.itemPrice').textContent.slice(2, 6));
+
+
+
 
             const ItemList = document.createElement('div');
             ItemList.className = 'CartItemCont';
@@ -186,18 +196,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update the price 
             subTotalPricee += ItemPrice;
+            console.log(subTotalPricee);
+            
             const totalGst = subTotalPricee * 0.05;
             const totalPrice = subTotalPricee + totalGst
 
             subTotalPrice.textContent = subTotalPricee.toFixed(2);
             gstPrice.textContent = totalGst.toFixed(2);
             GTotalPrice.textContent = totalPrice.toFixed(2);
-            
 
-            const PList = document.createElement('div');
-            PList.className = 'Plist';
-            PList.innerHTML = 
-            
+
         })
     });
 });

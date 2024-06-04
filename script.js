@@ -1,14 +1,21 @@
+document.getElementById('LoginPage').style.display = "none"
+
+
+
+
 const FoodItems = [
     { id: 1, name: 'Biryani', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 2, name: 'Burger', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 3, name: 'Chiken', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 4, name: 'Paratha', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 5, name: 'Pizza', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 6, name: 'North Indian', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 7, name: 'Lassi', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 8, name: 'Ice Cream', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 9, name: 'Chhole Bhature', imageL: 'assets/img/kaajuKari.avif', price: '199' },
-    { id: 10, name: 'Roll', imageL: 'assets/img/kaajuKari.avif', price: '199' },
+    { id: 2, name: 'Burger', imageL: 'assets/img/burgerFC.avif', price: '199' },
+    { id: 3, name: 'Chiken', imageL: 'assets/img/butterChikenFC.webp', price: '199' },
+    { id: 4, name: 'Paratha', imageL: 'assets/img/ParathaFC.jpg', price: '199' },
+    { id: 5, name: 'Pizza', imageL: 'assets/img/PizzaFC.jpeg', price: '199' },
+    { id: 6, name: 'North Indian', imageL: 'assets/img/northFC.jpg', price: '199' },
+    { id: 7, name: 'Lassi', imageL: 'assets/img/lassiFC.jpeg', price: '199' },
+    { id: 8, name: 'Ice Cream', imageL: 'assets/img/IceCreamFC.jpeg', price: '199' },
+    { id: 9, name: 'Chhole Bhature', imageL: 'assets/img/ChholeFC.jpeg', price: '199' },
+    { id: 10, name: 'Roll', imageL: 'assets/img/RollFC.avif', price: '199' },
+    { id: 10, name: 'Poori', imageL: 'assets/img/PooriFC.webp', price: '199' },
+    { id: 10, name: 'Shake', imageL: 'assets/img/shakesFC.webp', price: '199' },
 
 ]
 
@@ -68,7 +75,7 @@ document.getElementById('downBtn').addEventListener('click', () => {
     function scrollToTop() {
         window.scrollTo({
             top: 750,
-            behavior: 'smooth' // Smooth scroll animation
+            behavior: 'smooth',
         });
     }
 })
@@ -146,13 +153,6 @@ document.getElementById('OCBtn').addEventListener('click', (e) => {
         document.getElementById('body').style.overflow = '';
         document.getElementById('cartCont').style.display = 'none';
     }
-
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'none' // Smooth scroll animation
-        });
-    }
 });
 
 
@@ -209,4 +209,74 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 });
+
+
+
+
+
+
+
+//Log-In / Sign-Up Page 
+document.getElementById('LIBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    if (document.getElementById('LoginPage').style.display == "none") {
+        
+        window.scroll(0,0);
+        // scrollToTop();
+        document.getElementById('LoginPage').style.display = 'flex';
+        document.getElementById('body').style.overflow = 'hidden';
+    } else {
+        document.getElementById('body').style.overflow = '';
+        document.getElementById('LoginPage').style.display = 'none';
+    }
+});
+
+// Close Btn
+document.getElementById('closeB').addEventListener('click', (e) => {
+    e.preventDefault();
+    if(document.getElementById('LoginPage').style.display =='flex'){
+        document.getElementById('LoginPage').style.display = "none";
+        document.getElementById('body').style.overflow = '';
+    } else {
+        document.getElementById('LoginPage').style.display = 'flex';
+    }
+})
+
+
+
+
+// Log-In / Sign-Up Btns
+document.getElementById('SignUpFrom').style.display = 'none';
+document.getElementById('SignBtn').style.backgroundColor = '#010101';
+document.getElementById('LogBtn').style.backgroundColor = '#FC8A06';
+document.getElementById('H3').style.backgroundColor = '#FC8A06';
+
+//Sign-Up Btn
+document.getElementById('SignBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (document.getElementById('SignUpFrom').style.display == 'none') {
+        document.getElementById('SignUpFrom').style.display = 'block';
+        document.getElementById('loginFrom').style.display = 'none';       
+    } else {
+        document.getElementById('SignUpFrom').style.display = 'none';
+        document.getElementById('loginFrom').style.display = 'block';
+    }
+});
+
+
+
+//Log-In Btn
+document.getElementById('SLogBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (document.getElementById('loginFrom').style.display == 'none') {
+        document.getElementById('loginFrom').style.display = 'block';
+        document.getElementById('SignUpFrom').style.display = 'none';        
+    } else {
+        document.getElementById('SignUpFrom').style.display = 'none';
+        document.getElementById('loginFrom').style.display = 'block';
+    }
+});
+
 

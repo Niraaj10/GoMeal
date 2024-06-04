@@ -10,7 +10,7 @@
 
 <body id="body">
 
-    <div class="container">
+    <div class="container" id="container">
 
 
 
@@ -32,7 +32,7 @@
                 </div>
                 <li> <img src="assets/SVG/home.svg" alt="">Home</li>
                 <li id="OCBtn"> <img src="assets/SVG/cart.svg" alt="">Order</li>
-                <li> <img src="assets/SVG/login.svg" alt="">LogIn / SignIn </li>
+                <li id="LIBtn"> <img src="assets/SVG/login.svg" alt="">LogIn / SignIn </li>
             </ul>
         </div>
 
@@ -344,7 +344,10 @@
 
 
 
-        <div class="LoginPage">
+        <div class="LoginPage" id="LoginPage">
+            <div class="csross" id="closeB">
+                <img src="assets/SVG/Cross.svg" alt="" width="33px">
+            </div>
             <div class="LS">
                 <div class="LL">
                     <div class="Llogo">
@@ -354,12 +357,33 @@
                 </div>
 
                 <div class="LR">
-                    <form>
-                        <h3>
-                            <div class="LBtn">Log-In</div>
-                            <div class="SBtn">Sign-Up</div>
+                    <form id="loginFrom">
+                        <h3 id="H3">
+                            <div class="LBtn" id="LogBtn">Log-In</div>
+                            <div class="SBtn" id="SignBtn">Sign-Up</div>
                         </h3>
                 
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="Email or Phone" id="username">
+                
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Password" id="password">
+                
+                        <button id="LogInBtn">Log In</button>
+                        <!-- <div class="social">
+                          <div class="go"><i class="fab fa-google"></i>  Google</div>
+                          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+                        </div> -->
+                    </form>
+                    <form id="SignUpFrom">
+                        <h3 id="HH3">
+                            <div class="LBtn" id="SLogBtn">Log-In</div>
+                            <div class="SBtn" id="SSignBtn">Sign-Up</div>
+                        </h3>
+                
+                        <label for="username">Name</label>
+                        <input type="text" placeholder="Name" id="username">
+
                         <label for="username">Username</label>
                         <input type="text" placeholder="Email or Phone" id="username">
                 

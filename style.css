@@ -13,8 +13,6 @@ html {
 
 body {
     background-color: white;
-    /* overflow: hidden; */
-    /* position: relative; */
 }
 body::-webkit-scrollbar {
     display: none;
@@ -23,9 +21,7 @@ body::-webkit-scrollbar {
 .border {
     border-bottom: 1px solid #FC8A06;
     opacity: 0.2;
-    margin: 0px 85px;
-    /* padding: 25px 0px; */
-    
+    margin: 0px 85px;   
 }
 
 .container {
@@ -59,7 +55,7 @@ body::-webkit-scrollbar {
     z-index: 15;
     background-color: white;
     width: calc(100vw - 200px);
-    padding: 30px 100px;
+    padding: 25px 100px;
     padding-bottom: 15px;
     display: flex;
     align-items: center;
@@ -91,7 +87,7 @@ body::-webkit-scrollbar {
 }
 #searchBar {
     width: 230px;
-    padding: 10px 20px;
+    padding: 3px 20px;
     padding-left: 30px;
     /* border: 0.5px solid #010101; */
     border: none;
@@ -100,7 +96,7 @@ body::-webkit-scrollbar {
 }
 .searchSVG {
     position: absolute;
-    top: 12px;
+    top: 27px;
     left: 7px;
 }
 
@@ -656,7 +652,12 @@ li > h5 {
 
 
 
-
+.csross {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    cursor: pointer;
+}
 .LoginPage {
     position: absolute;
     /* display: none; */
@@ -664,10 +665,10 @@ li > h5 {
     gap: 50px;
     background-color: transparent;
     padding: 0px 229px;
-    padding-top: 83px;
+    padding-top: 70px;
     backdrop-filter: blur(10px);
     width: 71vw;
-    height: 90vh;
+    height: 92vh;
     overflow: hidden;
     align-self: center;
 }
@@ -709,12 +710,17 @@ li > h5 {
     font-weight: 800;
 }
 
+#loginFrom {
+    display: block;
+}
+
 form{
     height: 520px;
     width: 400px;
     border-radius: 10px;
     border: 2px solid rgba(255,255,255,0.1);
     padding: 40px 35px;
+    transition: all;
     /* display: flex;
     flex-direction: column;
     justify-content: center; */
@@ -726,7 +732,12 @@ form *{
     outline: none;
     border: none;
 }
+
+#HH3{
+    background-color: #FC8A06;
+}
 form > h3{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     font-size: 25px;
@@ -734,18 +745,41 @@ form > h3{
     line-height: 42px;
     text-align: center;
     margin: 0px 84px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-radius: 20px;
-    background-color: #fd8700;
+    /* background-color: #fd8700; */
+
 }
-.LBtn {
+#LogBtn {
+    background-color: #fd8700;
+    border-top-left-radius: 20px;    
     color: white;
     padding: 10px;
 }
-.SBtn {
+#SignBtn {
     padding: 10px;
-    background-color: black;
+    background-color: #010101;
     border-radius: 20px;
+    border-top-right-radius: 0px;
+    color: white;
+    padding: 10px;
+}
+#SLogBtn {
+    background-color: #010101;
+    border-top-left-radius: 20px;    
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-bottom-right-radius: 17px;
+    border-top-right-radius: 17px;
+    color: white;
+    padding: 10px;
+    padding-right: 10px;
+}
+#SSignBtn {
+    /* padding: 10px; */
+    background-color: #fd8700;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 17px;
     color: white;
     padding: 10px;
 }
